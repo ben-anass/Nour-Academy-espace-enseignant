@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nour Academy - Espace Enseignant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Nour Academy</h1>
+                <p>Espace enseignant</p>
+            </div>
+
+            <div class="teacher-info">
+                <span class="teacher-name">Espace professeur</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <div>
+                <p class="subtitle">Tableau de bord</p>
+                <h2>Bonjour, Enseignant 👋</h2>
+                <p>Retrouvez vos élèves et suivez leur progression.</p>
+            </div>
+        </section>
+
+
+        <section class="students-section">
+
+            <div class="section-header">
+                <div>
+                    <h2>Mes élèves</h2>
+                    <p>Consultez les informations de vos élèves.</p>
+                </div>
+
+                <span id="compteur" class="counter">0 élèves</span>
+            </div>
+
+
+            <div class="filters">
+
+                <div class="filter-group">
+                    <label for="filtre-groupe">Groupe</label>
+
+                    <select id="filtre-groupe">
+                        <option value="tous">Tous les groupes</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="recherche">Rechercher un élève</label>
+
+                    <input
+                        type="search"
+                        id="recherche"
+                        placeholder="Nom ou prénom..."
+                    >
+                </div>
+
+            </div>
+
+
+            <ul id="liste-eleves" class="students-list"></ul>
+
+
+            <p id="message-vide" class="empty-message" hidden>
+                Aucun élève trouvé.
+            </p>
+
+        </section>
+
+    </main>
+
+    <script src="src/data.js"></script>
+    <script src="src/script.js"></script>
+
+</body>
+</html>
